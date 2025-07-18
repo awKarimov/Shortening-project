@@ -1,4 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --color: white;
+  --text-color: #9e9aa8;
+  --button-color: #2bd0d0;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -41,7 +64,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding-top: 55px;
-  background-color: white;
+  background-color: var(--color);
 }
 
 .content {
@@ -63,7 +86,7 @@ a {
 
 .header-link {
   font-weight: bold;
-  color: #9e9aa8;
+  color: var(--text-color);
 }
 
 .sign {
@@ -74,16 +97,16 @@ a {
 }
 
 .sign-up {
-  background-color: #2bd0d0;
+  background-color: var(--button-color);
   border-radius: 28px;
   padding: 9px 23px;
-  color: white;
+  color: var(--color);
 }
 
 /* Hero */
 
 .hero {
-  background-color: white;
+  background-color: var(--color);
   height: 800px;
   overflow: hidden;
 }
@@ -112,7 +135,7 @@ a {
   font-size: 22px;
   line-height: 36px;
   letter-spacing: 0.15px;
-  color: #9e9aa8;
+  color: var(--text-color);
   margin-left: 135px;
   font-weight: 500;
 }
@@ -121,8 +144,8 @@ a {
   font-size: 20px;
   font-weight: 700;
   display: inline-block;
-  color: white;
-  background-color: #2bd0d0;
+  color: var(--color);
+  background-color: var(--button-color);
   padding: 14px 40px;
   margin-left: 135px;
   margin-top: 38px;
@@ -159,7 +182,7 @@ a {
   line-height: 32px;
   letter-spacing: 0.12px;
   width: 540px;
-  color: #9e9aa8;
+  color: var(--text-color);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -172,7 +195,7 @@ a {
   margin-top: 100px;
   margin-left: 165px;
   margin-right: 165px;
-  background-image: url(/imgaes/rectangle.svg);
+  background-image: url(/images/rectangle.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1110px 8px;
@@ -182,7 +205,7 @@ a {
 .dominance {
   width: 350px;
   height: 267px;
-  background-color: white;
+  background-color: var(--color);
 }
 
 .second {
@@ -212,17 +235,17 @@ a {
 
 .statistics-title {
   font-size: 22px;
-  font-weight: 700px;
+  font-weight: 700;
   margin-left: 32px;
   margin-bottom: 12px;
 }
 
 .statistics-text {
   font-size: 15px;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 26px;
   width: 286px;
-  color: #9e9aa8;
+  color: var(--text-color);
   margin-left: 32px;
 }
 
@@ -237,7 +260,7 @@ a {
 
 .cta-content {
   text-align: center;
-  background-image: url(/imgaes/cta-img.svg);
+  background-image: url(/images/cta-img.svg);
   height: 250px;
   width: 1440px;
   display: inline-block;
@@ -256,8 +279,8 @@ a {
   font-size: 20px;
   font-weight: 700;
   display: inline-block;
-  color: white;
-  background-color: #2bd0d0;
+  color: var(--color);
+  background-color: var(--button-color);
   padding: 14px 40px;
   border-radius: 28px;
 }
@@ -279,7 +302,7 @@ a {
   margin-top: 71px;
   margin-left: 163px;
   margin-right: 262px;
-  fill: white;
+  fill: var(--color);
 }
 
 .footer-links {
@@ -293,13 +316,13 @@ a {
 h4 {
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: var(--color);
 }
 
 .footer-link {
   white-space: nowrap;
   font-size: 15px;
-  color: #9e9aa8;
+  color: var(--text-color);
   margin-top: 22px;
   margin-bottom: 10px;
 }
@@ -414,7 +437,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(/imgaes/rectangle.svg);
+    background-image: url(/images/rectangle.svg);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: cover;
@@ -570,7 +593,7 @@ h4 {
 
 @media (max-width: 560px) {
   .hero {
-    height: 730px;
+    height: 735px;
   }
 
   .hero-title {
@@ -583,7 +606,9 @@ h4 {
     font-size: 15px;
     line-height: 20px;
     width: 300px;
-    margin-left: 306px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .blue-button {
@@ -594,12 +619,21 @@ h4 {
   .hero-img {
     margin-top: -160px;
   }
-}
 
-@media (max-width: 520px) {
+  .info-title {
+    font-size: 28px;
+    width: 280px;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .info-text {
+    text-align: left;
+    width: 345px;
+    margin-left: 10px;
+  }
+
   .advertisement {
-    margin-left: 270px;
-    margin-right: 270px;
+    margin-left: 155px;
   }
 }
 
@@ -613,22 +647,24 @@ h4 {
   .nd-burger-menu {
     width: 22px;
     height: 22px;
-    margin-right: 0;
+    margin-right: 10px;
   }
 
   .hero {
-    height: 500px;
+    height: 530px;
   }
 
   .hero-title {
     font-size: 28px;
     line-height: 35px;
+    letter-spacing: 0.4px;
   }
 
   .hero-text {
     font-size: 12px;
     margin-top: -20px;
-    line-height: 15px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
     margin-bottom: -25px;
   }
 
@@ -639,8 +675,31 @@ h4 {
 
   .hero-img {
     width: 120%;
-    margin-top: -240px;
+    margin-top: -210px;
     margin-bottom: -140px;
+  }
+
+  .circle {
+    margin-left: 80px;
+  }
+
+  .dominance {
+    width: 255px;
+  }
+
+  .info-text {
+    width: 280px;
+  }
+
+  .statistics-title {
+    margin-left: 12px;
+  }
+
+  .statistics-text {
+    font-size: 12px;
+    width: 215px;
+    text-align: left;
+    margin-left: 12px;
   }
 }
 
@@ -649,5 +708,9 @@ h4 {
     width: 130%;
     margin-left: 60px;
     margin-bottom: -170px;
+  }
+
+  .advertisement {
+    margin-left: 115px;
   }
 }
